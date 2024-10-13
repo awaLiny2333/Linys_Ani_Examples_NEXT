@@ -1,6 +1,6 @@
 import Curves from '@ohos.curves';
 import { LengthMetrics } from '@kit.ArkUI';
-import { fontSize_Extra_Large, fontSize_Large } from '../defaults/defaults';
+import { click_effect_default, fontSize_Extra_Large, fontSize_Large } from '../defaults/defaults';
 
 @Component
 struct ButtonCard {
@@ -53,7 +53,7 @@ struct ButtonCard {
       .borderRadius(20)
       .backgroundColor($r('app.color.color_accent'))
       .width("100%")
-      .clickEffect({ level: ClickEffectLevel.LIGHT })
+      .clickEffect(click_effect_default())
       .height(this.card_height)
     }
     .offset({ y: this.offset_y })

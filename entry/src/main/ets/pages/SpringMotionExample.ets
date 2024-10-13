@@ -1,5 +1,5 @@
 import Curves from '@ohos.curves';
-import { fontSize_Large } from '../defaults/defaults';
+import { click_effect_default, fontSize_Large } from '../defaults/defaults';
 import { fontSize_Extra_Large } from '../defaults/defaults';
 
 @Entry
@@ -28,7 +28,7 @@ struct SpringMotionExample {
           Text('󰃚')
             .fontWeight(FontWeight.Bold)
             .fontSize(fontSize_Extra_Large())
-            .clickEffect({ level: ClickEffectLevel.LIGHT })
+            .clickEffect(click_effect_default())
         }
 
         Text('弹性动画')
@@ -101,7 +101,7 @@ struct SpringMotionExample {
         .borderRadius(22)
         .backgroundColor($r('app.color.color_accent'))
         .width("100%")
-        .clickEffect({ level: ClickEffectLevel.LIGHT })
+        .clickEffect(click_effect_default())
         .animation({ curve: Curves.springMotion(this.response, this.dampingFraction) })
 
         Button("ε=( o｀ω′)ノ")
@@ -116,7 +116,7 @@ struct SpringMotionExample {
             }
             this.went_to_the_right = !this.went_to_the_right;
           })
-          .clickEffect({ level: ClickEffectLevel.LIGHT })
+          .clickEffect(click_effect_default())
           .fontWeight(FontWeight.Bold)
           .backgroundColor($r('app.color.color_accent'))
           .animation({ curve: Curves.springMotion(this.response, this.dampingFraction) })
@@ -129,5 +129,3 @@ struct SpringMotionExample {
     .padding({ left: 20, right: 20, top: 10 })
   }
 }
-
-export default SpringMotionExample

@@ -1,5 +1,5 @@
 import Curves from '@ohos.curves';
-import { fontSize_Extra_Large, fontSize_Large } from '../defaults/defaults';
+import { click_effect_default, fontSize_Extra_Large, fontSize_Large } from '../defaults/defaults';
 
 @Entry
 @Component
@@ -16,7 +16,7 @@ struct FadeInExample {
           Text('󰃚')
             .fontWeight(FontWeight.Bold)
             .fontSize(fontSize_Extra_Large())
-            .clickEffect({ level: ClickEffectLevel.LIGHT })
+            .clickEffect(click_effect_default())
         }
 
         Text('浮现入场')
@@ -39,8 +39,6 @@ struct FadeInExample {
     .padding({ left: 20, right: 20, top: 10 })
   }
 }
-
-export default FadeInExample
 
 @Component
 struct item {
