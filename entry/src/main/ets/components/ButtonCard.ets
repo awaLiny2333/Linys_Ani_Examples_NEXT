@@ -63,7 +63,7 @@ struct ButtonCard {
       setTimeout(() => {
         this.opa = 1;
         this.offset_y = 0;
-      }, (this.timeout) * 75)
+      }, (this.timeout) * 100)
     })
   }
 }
