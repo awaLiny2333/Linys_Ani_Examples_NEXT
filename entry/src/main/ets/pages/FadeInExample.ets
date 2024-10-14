@@ -28,7 +28,7 @@ struct FadeInExample {
       Scroll() {
         Column({ space: 10 }) {
           ForEach(this.labels, (text: string, index: number) => {
-            item({ text: text, timeout: index })
+            any_item({ text: text, timeout: index })
           })
         }
       }.edgeEffect(EdgeEffect.Spring)
@@ -41,7 +41,7 @@ struct FadeInExample {
 }
 
 @Component
-struct item {
+struct any_item {
   @State text: string = "";
   @State offset_y: number = 100;
   @State opa: number = 0;
@@ -82,3 +82,5 @@ struct item {
     })
   }
 }
+
+export default any_item

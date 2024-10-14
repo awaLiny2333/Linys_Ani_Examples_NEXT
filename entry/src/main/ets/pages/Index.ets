@@ -1,25 +1,15 @@
 import ButtonCard from '../components/ButtonCard'
-import { fontSize_Extra_Large, fontSize_Large } from '../defaults/defaults'
+import responsiveLayout from '../components/ResponsiveLayout'
 
 @Entry
 @Component
 struct Index {
   build() {
-    Scroll() {
-      Column({ space: 10 }) {
-
-        Row()
-          .height(30)
-        Text($r('app.string.index_title'))
-          .fontWeight(FontWeight.Bold)
-          .fontSize(fontSize_Extra_Large())
-        Text('ヾ(⌐■_■)ノ♪')
-          .fontWeight(FontWeight.Bold)
-          .fontSize(fontSize_Large())
-          .opacity(0.5)
-        Row()
-          .height(30)
-
+    Column(){
+      responsiveLayout({
+        title: $r('app.string.index_title'),
+        subTitle: 'ヾ(⌐■_■)ノ♪'
+      }){
         ButtonCard({
           navigate_target: 'pages/SpringMotionExample',
           title: $r('app.string.index_example_springMotion'),
@@ -28,7 +18,6 @@ struct Index {
           card_height: 140,
           timeout: 0
         })
-
         ButtonCard({
           navigate_target: 'pages/FadeInExample',
           title: $r('app.string.index_example_floatEntry'),
@@ -37,13 +26,15 @@ struct Index {
           card_height: 140,
           timeout: 1
         })
-
+        ButtonCard({
+          navigate_target: 'pages/responsiveLayout',
+          title: $r('app.string.index_example_responsiveLayout'),
+          subtitle: '2024 / 10 / 15',
+          corner: '03',
+          card_height: 140,
+          timeout: 2
+        })
       }
-      .alignItems(HorizontalAlign.Start)
-      .padding({ left: 20, right: 20 })
     }
-    .height("100%")
-    .edgeEffect(EdgeEffect.Spring)
-    .align(Alignment.Top)
   }
 }
