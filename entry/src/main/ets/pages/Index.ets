@@ -10,7 +10,7 @@ struct Index {
 
         Row()
           .height(30)
-        Text('Liny 的\n动画游乐场')
+        Text($r('app.string.index_title'))
           .fontWeight(FontWeight.Bold)
           .fontSize(fontSize_Extra_Large())
         Text('ヾ(⌐■_■)ノ♪')
@@ -22,7 +22,7 @@ struct Index {
 
         ButtonCard({
           navigate_target: 'pages/SpringMotionExample',
-          title: 'Curves.springMotion 弹性动画案例',
+          title: $r('app.string.index_example_springMotion'),
           subtitle: '2024 / 10 / 10',
           corner: '01',
           card_height: 140,
@@ -31,7 +31,7 @@ struct Index {
 
         ButtonCard({
           navigate_target: 'pages/FadeInExample',
-          title: '浮现入场动画案例',
+          title: $r('app.string.index_example_floatEntry'),
           subtitle: '2024 / 10 / 13',
           corner: '02',
           card_height: 140,

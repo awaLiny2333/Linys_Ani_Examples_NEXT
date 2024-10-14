@@ -11,6 +11,26 @@
     {
       "name": "EntryAbility_label",
       "value": "AniExamples"
+    },
+    {
+      "name": "index_example_springMotion",
+      "value": "Curves.springMotion Example"
+    },
+    {
+      "name": "index_example_floatEntry",
+      "value": "Float Entry Animation (Float) Example"
+    },
+    {
+      "name": "index_title",
+      "value": "Liny's Animation Stack"
+    },
+    {
+      "name": "springMotion_response_info",
+      "value": "Equals to the length of animation when dampingFraction = 0, \nalso equals to the time taken for the spring to vibrate once."
+    },
+    {
+      "name": "springMotion_dampingFraction_info",
+      "value": "[0，1) smaller value is more bouncing, won't stop if set 0 \n1 critical value, the standard velocity decreasing effect \n(1, ＋∞) bigger value is slower gradual stop"
     }
   ]
 }

@@ -6,7 +6,7 @@ import { click_effect_default, fontSize_Extra_Large, fontSize_Large } from '../d
 struct FadeInExample {
   @State response: number = 0.55;
   @State dampingFraction: number = 0.825;
-  @State labels: string[] = ["Meow", "¯\\_(ツ)_/¯", "( •̀ ω •́ )✧", "在一起", "(～o￣3￣)～", "就可以！"]
+  @State labels: string[] = ["Meow", "¯\\_(ツ)_/¯", "( •̀ ω •́ )✧", "在一起 Together", "(～o￣3￣)～", "就可以！TECH4ALL"]
 
   build() {
 
@@ -19,7 +19,7 @@ struct FadeInExample {
             .clickEffect(click_effect_default())
         }
 
-        Text('浮现入场')
+        Text($r('app.string.index_example_floatEntry'))
           .fontWeight(FontWeight.Bold)
           .fontSize(fontSize_Large())
       }
@@ -69,6 +69,7 @@ struct item {
     .width("100%")
     .borderRadius(22)
     .padding(16)
+    .clickEffect(click_effect_default())
     // Entry animation
     .offset({ y: this.offset_y })
     .opacity(this.opa)

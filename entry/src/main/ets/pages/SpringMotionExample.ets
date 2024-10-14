@@ -1,6 +1,6 @@
 import Curves from '@ohos.curves';
-import { click_effect_default, fontSize_Large } from '../defaults/defaults';
-import { fontSize_Extra_Large } from '../defaults/defaults';
+import { click_effect_default, fontSize_Extra_Large, fontSize_Large } from '../defaults/defaults';
+import { LengthMetrics } from '@kit.ArkUI';
 
 @Entry
 @Component
@@ -31,7 +31,7 @@ struct SpringMotionExample {
             .clickEffect(click_effect_default())
         }
 
-        Text('弹性动画')
+        Text($r('app.string.index_example_springMotion'))
           .fontWeight(FontWeight.Bold)
           .fontSize(fontSize_Large())
       }
@@ -65,9 +65,9 @@ struct SpringMotionExample {
             .layoutWeight(1)
         } // Response input
 
-        Text("当 dampingFraction = 0 时动画的时长")
-        Text("也等于 dampingFraction = 0 时弹一个来回的时长")
+        Text($r('app.string.springMotion_response_info'))
           .margin({ bottom: 10 })
+          .lineSpacing(LengthMetrics.vp(6))
 
         Row({ space: 10 }) {
           Text("dampingFraction")
@@ -84,10 +84,9 @@ struct SpringMotionExample {
             .layoutWeight(1)
         } // DampingFraction input
 
-        Text("[0，1) 值越小越弹，0 时一直弹")
-        Text("1 临界，也就是普通的渐缓")
-        Text("(1, ＋∞) 值越大渐缓越明显")
+        Text($r('app.string.springMotion_dampingFraction_info'))
           .margin({ bottom: 10 })
+          .lineSpacing(LengthMetrics.vp(6))
 
         Column() {
           Text(".animation({ curve: Curves.springMotion(" + this.response.toString() + ", " +

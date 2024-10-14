@@ -5,7 +5,7 @@ import { click_effect_default, fontSize_Extra_Large, fontSize_Large } from '../d
 @Component
 struct ButtonCard {
   @State navigate_target: string = 'pages/SpringMotionExample'
-  @State title: string = 'meow';
+  @State title: ResourceStr = 'meow';
   @State subtitle: string = 'meow';
   @State corner: string = '01';
   @State card_height: number = 300;

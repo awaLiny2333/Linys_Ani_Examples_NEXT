@@ -11,6 +11,26 @@
     {
       "name": "EntryAbility_label",
       "value": "动效案例"
+    },
+    {
+      "name": "index_example_springMotion",
+      "value": "弹性曲线动画案例"
+    },
+    {
+      "name": "index_example_floatEntry",
+      "value": "入场动画（浮现）案例"
+    },
+    {
+      "name": "index_title",
+      "value": "Liny 的\n动画堆"
+    },
+    {
+      "name": "springMotion_response_info",
+      "value": "当 dampingFraction = 0 时动画的时长\n也等于 dampingFraction = 0 时弹一个来回的时长"
+    },
+    {
+      "name": "springMotion_dampingFraction_info",
+      "value": "[0，1) 值越小越弹，0 时一直弹\n1 临界，也就是普通的渐缓\n(1, ＋∞) 值越大渐缓越明显"
     }
   ]
 }
