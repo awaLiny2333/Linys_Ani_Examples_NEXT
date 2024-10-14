@@ -1,12 +1,12 @@
 import ButtonCard from '../components/ButtonCard'
-import responsiveLayout from '../components/ResponsiveLayout'
+import ResponsiveLayout from '../components/ResponsiveLayout'
 
 @Entry
 @Component
 struct Index {
   build() {
     Column(){
-      responsiveLayout({
+      ResponsiveLayout({
         title: $r('app.string.index_title'),
         subTitle: 'ヾ(⌐■_■)ノ♪'
       }){
@@ -27,7 +27,7 @@ struct Index {
           timeout: 1
         })
         ButtonCard({
-          navigate_target: 'pages/responsiveLayout',
+          navigate_target: 'pages/responsiveLayoutExample',
           title: $r('app.string.index_example_responsiveLayout'),
           subtitle: '2024 / 10 / 15',
           corner: '03',

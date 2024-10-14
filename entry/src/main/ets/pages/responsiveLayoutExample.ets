@@ -1,4 +1,4 @@
-import responsiveLayout from '../components/ResponsiveLayout';
+import ResponsiveLayout from '../components/ResponsiveLayout';
 import any_item from './FadeInExample';
 
 @Entry
@@ -8,7 +8,7 @@ struct responsiveLayoutExample {
 
   build() {
     Column() {
-      responsiveLayout({
+      ResponsiveLayout({
         title: $r('app.string.index_example_responsiveLayout'),
         subTitle: 'ヽ(￣ω￣(￣ω￣〃)ゝ',
       }) {
@@ -19,9 +19,5 @@ struct responsiveLayoutExample {
     }
     .height("100%")
     .width("100%")
-  }
-
-  proportion_float_to_string(p: number) {
-    return (p * 100).toString() + "%";
   }
 }

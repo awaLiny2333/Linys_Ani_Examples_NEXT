@@ -3,7 +3,7 @@ import { fontSize_Extra_Large, fontSize_Large } from '../defaults/defaults';
 
 @Entry
 @Component
-struct responsiveLayout {
+struct ResponsiveLayout {
   // Basic info
   @State title: ResourceStr = ""
   @State subTitle: ResourceStr = ""
@@ -53,7 +53,7 @@ struct responsiveLayout {
         .borderRadius(16)
         // Position settings
         .alignRules(this.landscapeLayout ? this.alignRules_left : this.alignRules_top)
-        .width((this.landscapeLayout ? this.alignLeftProportion : 1) * this.areaWidth)
+        .width((this.landscapeLayout ? this.alignLeftProportion : 1) * this.areaWidth - (this.landscapeLayout ? 20 : 0))
         .height((this.landscapeLayout ? 1 : this.alignTopProportion) * this.areaHeight)
         .animation(this.animationParam)
 
@@ -110,4 +110,4 @@ struct responsiveLayout {
   }
 }
 
-export default responsiveLayout;
+export default ResponsiveLayout;
