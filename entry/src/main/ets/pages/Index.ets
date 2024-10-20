@@ -34,6 +34,14 @@ struct Index {
           card_height: 140,
           timeout: 2
         })
+        ButtonCard({
+          navigate_target: 'pages/SymbolsExample',
+          title: $r('app.string.index_example_symbols'),
+          subtitle: '2024 / 10 / 20',
+          corner: '04',
+          card_height: 140,
+          timeout: 3
+        })
       }
     }
   }

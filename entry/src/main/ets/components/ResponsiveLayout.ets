@@ -53,7 +53,7 @@ struct ResponsiveLayout {
         .borderRadius(16)
         // Position settings
         .alignRules(this.landscapeLayout ? this.alignRules_left : this.alignRules_top)
-        .width((this.landscapeLayout ? this.alignLeftProportion : 1) * this.areaWidth - (this.landscapeLayout ? 20 : 0))
+        .width((this.landscapeLayout ? this.alignLeftProportion : 1) * this.areaWidth)
         .height((this.landscapeLayout ? 1 : this.alignTopProportion) * this.areaHeight)
         .animation(this.animationParam)
 
@@ -91,7 +91,7 @@ struct ResponsiveLayout {
     .enableScrollInteraction(this.landscapeLayout ? false : true)
     .onAreaChange((_o, n) => {
       // Set display size
-      this.areaWidth = n.width as number - 20;
+      this.areaWidth = n.width as number - (this.landscapeLayout ? 40 : 20);
       this.areaHeight = n.height as number - 20;
       // determine tabletMode
       if (this.areaWidth > 400) {

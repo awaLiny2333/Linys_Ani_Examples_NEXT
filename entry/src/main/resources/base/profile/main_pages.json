@@ -3,6 +3,7 @@
     "pages/Index",
     "pages/SpringMotionExample",
     "pages/FadeInExample",
-    "pages/responsiveLayoutExample"
+    "pages/responsiveLayoutExample",
+    "pages/SymbolsExample"
   ]
 }
